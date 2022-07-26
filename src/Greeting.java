@@ -1,32 +1,44 @@
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Greeting {
     private final String GREETING;
+    private final HashMap<Character,Integer> charCount;
 
     public Greeting(String greeting) {
         GREETING = greeting;
+        charCount = countChar();
     }
 
     public String getGREETING() {
         return GREETING;
     }
 
-    public HashMap<Character,Integer> countChar() {
-        HashMap<Character,Integer> map = new HashMap<>();
+    public HashMap<Character, Integer> getCharCount() {
+        return charCount;
+    }
+
+    private HashMap<Character,Integer> countChar() {
         for(int i = 0; i < GREETING.length(); i++) {
             char letter = GREETING.charAt(i);
-            if(map.containsKey(letter)) {
-                map.replace(letter,map.get(letter) + 1);
+            if(!charCount.containsKey(letter)) {
+                charCount.put(letter,1);
             }
             else {
-                map.put(letter,1);
+                charCount.replace(letter, charCount.get(letter) + 1);
             }
         }
-        return map;
+        return charCount;
+    }
+
+    public Iterator<Map.Entry<Character, Integer>> iterator() {
+        return charCount.entrySet().iterator();
     }
 
     @Override
     public String toString() {
         return "Greeting: " + GREETING;
     }
+
 }
