@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e7b8299d-6d12-417b-b1ec-0f02c50318d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geeting-card.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/GreetingCard/Generator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GreetingCard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GreetingCard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/Greeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/Greeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GreetingCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GreetingCard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GreetingCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GreetingCard.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23v6jZZstkQLKoCJ3ttmWhzqd7F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/minix/Documents/GitHub/geeting-card",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\minix\IdeaProjects\ITEC 3150\src\FinalExam\Question3" />
+      <recent name="C:\Users\minix\IdeaProjects\ITEC 3150\src\FinalExam\Question2" />
+      <recent name="C:\Users\minix\IdeaProjects\ITEC 3150" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\minix\IdeaProjects\ITEC 3150\src\FinalExam\Question1" />
+      <recent name="C:\Users\minix\IdeaProjects\ITEC 3150\src" />
+      <recent name="C:\Users\minix\IdeaProjects\ITEC 3150\src\PersonEntry" />
+      <recent name="C:\Users\minix\IdeaProjects\ITEC 3150" />
+      <recent name="C:\Users\minix\IdeaProjects\ITEC 3150\src\ICs\IC5" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ICs.IC5" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.GreetingCard">
+    <configuration name="FinalExam.Question1.ButtonClickedStart" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="FinalExam.Question1.ButtonClickedStart" />
+      <module name="greetingcard" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\minix\Downloads\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FinalExam.Question1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GenericsTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ICs.IC3.GenericsTester" />
+      <module name="greetingcard" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\minix\Downloads\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ICs.IC3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetingCard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="GreetingCard" />
+      <module name="greetingcard" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\minix\Downloads\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashSetSynchronized" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="FinalExam.Question3.HashSetSynchronized" />
+      <module name="greetingcard" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\minix\Downloads\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FinalExam.Question3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecursionEX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="RecursionEX" />
+      <module name="greetingcard" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\minix\Downloads\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="FinalExam.Question2.TestBST" />
+      <module name="greetingcard" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\minix\Downloads\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FinalExam.Question2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="greetingcard" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\minix\Downloads\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="greetingcard" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="greetingcard" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FinalExam.Question1.ButtonClickedStart" />
+      <item itemvalue="Application.GreetingCard" />
+      <item itemvalue="Application.GenericsTester" />
+      <item itemvalue="Application.RecursionEX" />
+      <item itemvalue="Application.HashSetSynchronized" />
+      <item itemvalue="Application.TestBST" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GreetingCard" />
+        <item itemvalue="Application.GenericsTester" />
+        <item itemvalue="Application.RecursionEX" />
+        <item itemvalue="Application.HashSetSynchronized" />
+        <item itemvalue="Application.TestBST" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7b8299d-6d12-417b-b1ec-0f02c50318d2" name="Changes" comment="" />
+      <created>1642602350326</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642602350326</updated>
+      <workItem from="1642602354125" duration="974000" />
+      <workItem from="1642887210777" duration="516000" />
+      <workItem from="1642902246290" duration="12061000" />
+      <workItem from="1642969141075" duration="2418000" />
+      <workItem from="1642985023060" duration="6032000" />
+      <workItem from="1643029366070" duration="1143000" />
+      <workItem from="1643030532541" duration="6735000" />
+      <workItem from="1643126617693" duration="35000" />
+      <workItem from="1643127689293" duration="1851000" />
+      <workItem from="1643244010102" duration="1006000" />
+      <workItem from="1643413619213" duration="8058000" />
+      <workItem from="1643477959717" duration="6316000" />
+      <workItem from="1643508075375" duration="241000" />
+      <workItem from="1643508361255" duration="89000" />
+      <workItem from="1643832416910" duration="3140000" />
+      <workItem from="1643848203693" duration="2000" />
+      <workItem from="1643849809673" duration="4000" />
+      <workItem from="1643906250548" duration="27000" />
+      <workItem from="1644239214643" duration="6429000" />
+      <workItem from="1644249665643" duration="2000" />
+      <workItem from="1644265857432" duration="12000" />
+      <workItem from="1644343690820" duration="145000" />
+      <workItem from="1644357766018" duration="653000" />
+      <workItem from="1644378505416" duration="645000" />
+      <workItem from="1644413610790" duration="2616000" />
+      <workItem from="1644844556746" duration="3248000" />
+      <workItem from="1645018835376" duration="3441000" />
+      <workItem from="1645229964664" duration="9000" />
+      <workItem from="1645368932925" duration="14336000" />
+      <workItem from="1645391870815" duration="4576000" />
+      <workItem from="1645410273822" duration="6000" />
+      <workItem from="1645627076718" duration="7899000" />
+      <workItem from="1645647912522" duration="2415000" />
+      <workItem from="1645651826881" duration="177000" />
+      <workItem from="1646016362185" duration="7978000" />
+      <workItem from="1646053712605" duration="1918000" />
+      <workItem from="1646148562785" duration="12000" />
+      <workItem from="1646185336990" duration="3596000" />
+      <workItem from="1646231000486" duration="8106000" />
+      <workItem from="1646245845795" duration="672000" />
+      <workItem from="1646246538345" duration="135000" />
+      <workItem from="1646266537532" duration="859000" />
+      <workItem from="1646507746584" duration="58000" />
+      <workItem from="1646831079152" duration="4028000" />
+      <workItem from="1648469093529" duration="3446000" />
+      <workItem from="1648513683788" duration="143000" />
+      <workItem from="1648608165533" duration="61000" />
+      <workItem from="1648608279784" duration="1323000" />
+      <workItem from="1648641889078" duration="953000" />
+      <workItem from="1648642857420" duration="2699000" />
+      <workItem from="1648673876663" duration="307000" />
+      <workItem from="1648690835300" duration="10335000" />
+      <workItem from="1648749457029" duration="21000" />
+      <workItem from="1648753030665" duration="6000" />
+      <workItem from="1649073679180" duration="3989000" />
+      <workItem from="1649091524430" duration="1216000" />
+      <workItem from="1649181652729" duration="53000" />
+      <workItem from="1649425925921" duration="23022000" />
+      <workItem from="1649517006543" duration="626000" />
+      <workItem from="1649678555790" duration="2230000" />
+      <workItem from="1649708831816" duration="8000" />
+      <workItem from="1649851652325" duration="1718000" />
+      <workItem from="1649888278488" duration="614000" />
+      <workItem from="1650234164157" duration="728000" />
+      <workItem from="1650302495112" duration="6612000" />
+      <workItem from="1650323815725" duration="2514000" />
+      <workItem from="1650327360364" duration="1000" />
+      <workItem from="1650327456114" duration="48000" />
+      <workItem from="1650500352712" duration="696000" />
+      <workItem from="1650501142588" duration="1645000" />
+      <workItem from="1650503635152" duration="5000" />
+      <workItem from="1650564173273" duration="184000" />
+      <workItem from="1650566655814" duration="4018000" />
+      <workItem from="1650642835753" duration="4103000" />
+      <workItem from="1650656729912" duration="2130000" />
+      <workItem from="1650658868362" duration="7905000" />
+      <workItem from="1650667887786" duration="6000" />
+      <workItem from="1651024146442" duration="3077000" />
+      <workItem from="1651061593969" duration="836000" />
+      <workItem from="1651273208780" duration="95000" />
+      <workItem from="1651601230080" duration="1749000" />
+      <workItem from="1651602990944" duration="1413000" />
+      <workItem from="1651672988041" duration="8241000" />
+      <workItem from="1651854916128" duration="50000" />
+      <workItem from="1655086903134" duration="1440000" />
+      <workItem from="1656533815581" duration="291000" />
+      <workItem from="1656972830404" duration="9041000" />
+      <workItem from="1657228047975" duration="383000" />
+      <workItem from="1657635878797" duration="172000" />
+      <workItem from="1657636194956" duration="26000" />
+      <workItem from="1658770033108" duration="4000" />
+      <workItem from="1658849533496" duration="55000" />
+      <workItem from="1658849611312" duration="4453000" />
+      <workItem from="1658860166464" duration="18000" />
+      <workItem from="1658860370199" duration="349000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
