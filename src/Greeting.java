@@ -14,7 +14,7 @@ public class Greeting {
 
     public Greeting(String greeting) {
         GREETING = greeting;
-        charCount = countChar();
+        charCount = new HashMap<>();
     }
 
     public double total() {
@@ -48,7 +48,7 @@ public class Greeting {
         return charCount;
     }
 
-    private HashMap<Character,Integer> countChar() {
+    public void countChar() {
         for(int i = 0; i < GREETING.length(); i++) {
             char letter = GREETING.charAt(i);
             if(!charCount.containsKey(letter)) {
@@ -58,7 +58,6 @@ public class Greeting {
                 charCount.replace(letter, charCount.get(letter) + 1);
             }
         }
-        return charCount;
     }
 
     public Iterator<Map.Entry<Character, Integer>> iterator() {

@@ -1,40 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<GridPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Generator">
+<GridPane alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Generator">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="299.0" prefWidth="496.0">
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Current Card" />
+                  <MenuItem mnemonicParsing="false" text="All Cards" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="403.0" prefWidth="496.0" spacing="20.0" GridPane.rowIndex="1">
          <children>
-            <Label text="Greeting Card Generator" />
-            <HBox alignment="CENTER">
+            <Label text="Greeting Card Generator" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
                <children>
-                  <Label text="Message: " />
-                  <TextField fx:id="messageTF" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="236.0" text="Cost Per Character" GridPane.columnSpan="2" />
+                  <Label alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="150.0" text="Uppercase" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="114.0" text="\$0.05" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="17.0" prefWidth="143.0" text="Lowercase" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="170.0" text="\$0.02" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Special" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="172.0" text="\$0.03" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Digits" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="204.0" text="\$0.02" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                </children>
-            </HBox>
-            <HBox alignment="CENTER">
+            </GridPane>
+            <GridPane alignment="CENTER" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
                <children>
-                  <Label text="Paper Color: " />
-                  <TextField fx:id="colorTF"/>
+                  <Label text="Message " />
+                  <TextField fx:id="messageTF" GridPane.columnIndex="1" />
+                  <Label alignment="BOTTOM_CENTER" prefHeight="20.0" prefWidth="208.0" text="Paper Details" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Width " GridPane.rowIndex="2" />
+                  <TextField fx:id="widthTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Length " GridPane.rowIndex="3" />
+                  <TextField fx:id="lengthTF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Color " GridPane.rowIndex="4" />
+                  <TextField fx:id="colorTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                </children>
-            </HBox>
-            <Label fx:id="resultsLabel" />
-            <Button defaultButton="true" mnemonicParsing="false" text="OK" onAction="#showResults"  />
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </GridPane>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#showResults" text="Apply" />
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets bottom="20.0" />
+         </GridPane.margin>
       </VBox>
    </children>
 </GridPane>
