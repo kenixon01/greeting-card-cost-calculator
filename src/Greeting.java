@@ -16,7 +16,8 @@ public class Greeting {
         GREETING = greeting;
         charCount = countChar();
     }
-    private double total() {
+
+    public double total() {
         double total = 0;
         Iterator<Map.Entry<Character, Integer>> iterator = iterator();
         while(iterator.hasNext()) {
