@@ -6,14 +6,14 @@ public class Greeting {
     private final String GREETING;
     private final HashMap<Character,Integer> charCount;
 
-    private final double
-            COST_PER_UPPER = .05,
-            COST_PER_LOWER = .02,
-            COST_PER_SPECIAL = .03,
-            COST_PER_NUMBER = .02;
+    private double costPerUpper, costPerLower, costPerSpecial, costPerNumber;
 
-    public Greeting(String greeting) {
-        GREETING = greeting;
+    public Greeting(String GREETING, double costPerUpper, double costPerLower, double costPerSpecial, double costPerNumber) {
+        this.GREETING = GREETING;
+        this.costPerUpper = costPerUpper;
+        this.costPerLower = costPerLower;
+        this.costPerSpecial = costPerSpecial;
+        this.costPerNumber = costPerNumber;
         charCount = new HashMap<>();
     }
 
@@ -25,16 +25,16 @@ public class Greeting {
             char letter = next.getKey();
             int count = next.getValue();
             if(Character.isUpperCase(letter)) {
-                total += COST_PER_UPPER * count;
+                total += costPerUpper * count;
             }
             else if(Character.isLowerCase(letter)) {
-                total += COST_PER_LOWER * count;
+                total += costPerLower * count;
             }
             else if(Character.isDigit(letter)) {
-                total += COST_PER_NUMBER * count;
+                total += costPerNumber * count;
             }
             else {
-                total += COST_PER_SPECIAL * count;
+                total += costPerSpecial * count;
             }
         }
         return total;

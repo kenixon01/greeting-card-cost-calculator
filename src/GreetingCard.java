@@ -8,7 +8,7 @@ public class GreetingCard extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         GridPane pane = FXMLLoader.load(getClass().getResource("GreetingCard.fxml"));
-        Scene root = new Scene(pane, 500, 500);
+        Scene root = new Scene(pane, 500, 600);
         stage.setScene(root);
         stage.show();
 

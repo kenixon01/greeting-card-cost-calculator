@@ -1,12 +1,11 @@
 public class Card {
     private final int LENGTH, WIDTH;
-    private final String COLOR;
-    private final double COST_PER_SQ_IN = .2;
+    private double costPerSqIn = .02;
 
-    public Card(int length, int width, String color) {
+    public Card(int length, int width, double costPerSqIn) {
         LENGTH = length;
         WIDTH = width;
-        COLOR = color;
+        this.costPerSqIn = costPerSqIn;
     }
 
     public int area() {
@@ -14,7 +13,7 @@ public class Card {
     }
 
     public double total() {
-        return COST_PER_SQ_IN * area();
+        return costPerSqIn * area();
     }
     
     public int getLength() {
@@ -25,7 +24,4 @@ public class Card {
         return WIDTH;
     }
 
-    public String getCOLOR() {
-        return COLOR;
-    }
 }

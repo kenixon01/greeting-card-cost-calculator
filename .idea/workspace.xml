@@ -4,10 +4,9 @@
     <list default="true" id="e7b8299d-6d12-417b-b1ec-0f02c50318d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/Generator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/Generator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/Greeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/Greeting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/Price.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Generator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Greeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GreetingCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GreetingCard.fxml" afterDir="false" />
