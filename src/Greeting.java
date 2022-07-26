@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Greeting {
@@ -16,13 +15,18 @@ public class Greeting {
         HashMap<Character,Integer> map = new HashMap<>();
         for(int i = 0; i < GREETING.length(); i++) {
             char letter = GREETING.charAt(i);
-            if(!map.containsKey(letter)) {
-                map.put(letter,1);
+            if(map.containsKey(letter)) {
+                map.replace(letter,map.get(letter) + 1);
             }
             else {
-                map.replace(letter,map.get(letter) + 1);
+                map.put(letter,1);
             }
         }
         return map;
+    }
+
+    @Override
+    public String toString() {
+        return "Greeting: " + GREETING;
     }
 }
