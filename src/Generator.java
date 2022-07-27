@@ -1,15 +1,8 @@
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
-import javafx.scene.text.TextFlow;
-import javafx.stage.Stage;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -65,33 +58,40 @@ public class Generator {
         }
     }
 
+    @FXML
     private void fileOpen() {
 
     }
 
+    @FXML
     private void fileSave() {
     }
 
+    @FXML
     private void fileClose() {
         Platform.exit();
     }
 
+    @FXML
     private void fileClear() {
-        messageTF.clear();
-        widthTF.clear();
-        lengthTF.clear();
+        messageTF.setText("");
+        widthTF.setText("");
+        lengthTF.setText("");
+        totalTF.setText("");
         if(customCB.isSelected()) {
-            uppercaseTF.clear();
-            lowercaseTF.clear();
-            specialTF.clear();
-            digitsTF.clear();
-            sqTF.clear();
-            characterTA.clear();
-            countTA.clear();
-            costTA.clear();
+            uppercaseTF.setText("0.05");
+            lowercaseTF.setText("0.02");
+            digitsTF.setText("0.02");
+            specialTF.setText("0.03");
+            sqTF.setText("0.02");
+            characterTA.setText("");
+            countTA.setText("");
+            costTA.setText("");
+            customCB.setSelected(false);
         }
     }
 
+    @FXML
     private void helpAbout() {
         Alert help = new Alert(Alert.AlertType.INFORMATION);
         help.setTitle("About");

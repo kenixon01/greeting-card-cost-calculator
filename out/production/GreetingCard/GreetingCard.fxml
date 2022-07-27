@@ -38,19 +38,15 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem fx:id="fileOpen" mnemonicParsing="false" text="Open" />
-                  <MenuItem fx:id="fileSave" mnemonicParsing="false" text="Save" />
-              <MenuItem fx:id="fileClose" mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem fx:id="editDelete" mnemonicParsing="false" text="Delete" />
+                  <MenuItem fx:id="fileOpen" mnemonicParsing="false" onAction="#fileOpen" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#fileClear" text="Clear" />
+                  <MenuItem fx:id="fileSave" mnemonicParsing="false" onAction="#fileSave" text="Save" />
+              <MenuItem fx:id="fileClose" mnemonicParsing="false" onAction="#fileClose" text="Close" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem fx:id="helpAbout" mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="helpAbout" mnemonicParsing="false" onAction="#helpAbout" text="About" />
             </items>
           </Menu>
         </menus>
