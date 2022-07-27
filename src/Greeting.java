@@ -24,18 +24,24 @@ public class Greeting {
             Map.Entry<Character,Integer> next = iterator.next();
             char letter = next.getKey();
             int count = next.getValue();
-            if(Character.isUpperCase(letter)) {
-                total += costPerUpper * count;
-            }
-            else if(Character.isLowerCase(letter)) {
-                total += costPerLower * count;
-            }
-            else if(Character.isDigit(letter)) {
-                total += costPerNumber * count;
-            }
-            else {
-                total += costPerSpecial * count;
-            }
+            total = letterCost(letter,count);
+        }
+        return total;
+    }
+
+    public double letterCost(char letter, int count) {
+        double total = 0;
+        if(Character.isUpperCase(letter)) {
+            total += costPerUpper * count;
+        }
+        else if(Character.isLowerCase(letter)) {
+            total += costPerLower * count;
+        }
+        else if(Character.isDigit(letter)) {
+            total += costPerNumber * count;
+        }
+        else {
+            total += costPerSpecial * count;
         }
         return total;
     }

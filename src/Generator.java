@@ -9,12 +9,16 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.TextFlow;
 
+import java.util.Iterator;
+import java.util.Map;
+
 public class Generator {
     @FXML
     private TextField messageTF, widthTF, lengthTF, totalTF, uppercaseTF, lowercaseTF, specialTF,
     digitsTF, sqTF;
 
-    private double upper, lower, special, digits, sqIn;
+    @FXML
+    private TextArea characterTA, countTA, costTA;
 
     @FXML private CheckBox customCB;
 
@@ -31,7 +35,23 @@ public class Generator {
                 Integer.parseInt(lengthTF.getText()),
                 Double.parseDouble(sqTF.getText()));
         greeting.countChar();
-        totalTF.setText("$" + Math.round((greeting.total() + card.total()) * 100.0) / 100.0);
+        double total = Math.round((greeting.total() + card.total()) * 100.0) / 100.0;
+        totalTF.setText("$" + total);
+        StringBuilder ch = new StringBuilder();
+        StringBuilder num = new StringBuilder();
+        StringBuilder cost = new StringBuilder();
+        Iterator<Map.Entry<Character, Integer>> iterator = greeting.iterator();
+        while(iterator.hasNext()) {
+            Map.Entry<Character, Integer> next = iterator.next();
+            char letter = next.getKey();
+            int count = next.getValue();
+            ch.append(letter).append("\n");
+            num.append(count).append("\n");
+            cost.append("$").append(greeting.letterCost(letter, count)).append("\n");
+        }
+        characterTA.setText(ch.toString());
+        costTA.setText(cost.toString());
+        countTA.setText(num.toString());
     }
 
     @FXML
