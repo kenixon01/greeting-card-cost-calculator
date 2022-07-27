@@ -1,14 +1,15 @@
+import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.TextFlow;
+import javafx.stage.Stage;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -21,37 +22,83 @@ public class Generator {
     private TextArea characterTA, countTA, costTA;
 
     @FXML private CheckBox customCB;
+    private Greeting greeting;
+    private Card card;
 
     @FXML
     private void showResults(ActionEvent actionEvent) {
-        Greeting greeting = new Greeting(
-                messageTF.getText(),
-                Double.parseDouble(uppercaseTF.getText()),
-                Double.parseDouble(lowercaseTF.getText()),
-                Double.parseDouble(specialTF.getText()),
-                Double.parseDouble(digitsTF.getText()));
-        Card card = new Card(
-                Integer.parseInt(widthTF.getText()),
-                Integer.parseInt(lengthTF.getText()),
-                Double.parseDouble(sqTF.getText()));
-        greeting.countChar();
-        double total = Math.round((greeting.total() + card.total()) * 100.0) / 100.0;
-        totalTF.setText("$" + total);
-        StringBuilder ch = new StringBuilder();
-        StringBuilder num = new StringBuilder();
-        StringBuilder cost = new StringBuilder();
-        Iterator<Map.Entry<Character, Integer>> iterator = greeting.iterator();
-        while(iterator.hasNext()) {
-            Map.Entry<Character, Integer> next = iterator.next();
-            char letter = next.getKey();
-            int count = next.getValue();
-            ch.append(letter).append("\n");
-            num.append(count).append("\n");
-            cost.append("$").append(greeting.letterCost(letter, count)).append("\n");
+        try {
+            greeting = new Greeting(
+                    messageTF.getText(),
+                    Double.parseDouble(uppercaseTF.getText()),
+                    Double.parseDouble(lowercaseTF.getText()),
+                    Double.parseDouble(specialTF.getText()),
+                    Double.parseDouble(digitsTF.getText()));
+            card = new Card(
+                    Double.parseDouble(widthTF.getText()),
+                    Double.parseDouble(lengthTF.getText()),
+                    Double.parseDouble(sqTF.getText()));
+
+            greeting.countChar();
+            double total = Math.round((greeting.total() + card.total()) * 100.0) / 100.0;
+
+            StringBuilder ch = new StringBuilder(),
+                    num = new StringBuilder(),
+                    cost = new StringBuilder();
+            Iterator<Map.Entry<Character, Integer>> iterator = greeting.iterator();
+            while(iterator.hasNext()) {
+                Map.Entry<Character, Integer> next = iterator.next();
+                char letter = next.getKey();
+                int count = next.getValue();
+                ch.append(letter).append("\n");
+                num.append(count).append("\n");
+                cost.append("$").append(greeting.letterCost(letter, count)).append("\n");
+            }
+
+            totalTF.setText("$" + total);
+            characterTA.setText(ch.toString());
+            costTA.setText(cost.toString());
+            countTA.setText(num.toString());
+        } catch (InvalidInputException e) {
+            ErrorDisplay error = new ErrorDisplay(e.getMessage());
+            error.display();
         }
-        characterTA.setText(ch.toString());
-        costTA.setText(cost.toString());
-        countTA.setText(num.toString());
+    }
+
+    private void fileOpen() {
+
+    }
+
+    private void fileSave() {
+    }
+
+    private void fileClose() {
+        Platform.exit();
+    }
+
+    private void fileClear() {
+        messageTF.clear();
+        widthTF.clear();
+        lengthTF.clear();
+        if(customCB.isSelected()) {
+            uppercaseTF.clear();
+            lowercaseTF.clear();
+            specialTF.clear();
+            digitsTF.clear();
+            sqTF.clear();
+            characterTA.clear();
+            countTA.clear();
+            costTA.clear();
+        }
+    }
+
+    private void helpAbout() {
+        Alert help = new Alert(Alert.AlertType.INFORMATION);
+        help.setTitle("About");
+        String content = "The Greeting Card Cost Calculator allows users to determine the cost of a greeting cost" +
+                "based on the price per character and size of the card.";
+        help.setContentText(content);
+        help.show();
     }
 
     @FXML

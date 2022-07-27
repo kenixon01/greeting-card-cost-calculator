@@ -1,14 +1,24 @@
 public class Card {
-    private final int LENGTH, WIDTH;
-    private double costPerSqIn = .02;
+    private final double LENGTH, WIDTH;
+    private double costPerSqIn;
 
-    public Card(int length, int width, double costPerSqIn) {
+    public Card(double length, double width, double costPerSqIn) throws InvalidInputException {
         LENGTH = length;
         WIDTH = width;
         this.costPerSqIn = costPerSqIn;
+        checkCard();
     }
 
-    public int area() {
+    private void checkCard() throws InvalidInputException {
+        if(WIDTH <= 0 && LENGTH <= 0) {
+            throw new InvalidInputException("The card width and length must be greater than 0.");
+        }
+        if(costPerSqIn < 0.01) {
+            throw new InvalidInputException("The cost per square inch must be at least $0.01");
+        }
+    }
+
+    public double area() {
         return LENGTH * WIDTH;
     }
 
@@ -16,11 +26,11 @@ public class Card {
         return costPerSqIn * area();
     }
     
-    public int getLength() {
+    public double getLength() {
         return LENGTH;
     }
 
-    public int getWIDTH() {
+    public double getWIDTH() {
         return WIDTH;
     }
 
