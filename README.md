@@ -1,1 +1,0 @@
-# geeting-card
