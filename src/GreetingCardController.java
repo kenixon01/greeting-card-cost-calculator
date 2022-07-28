@@ -5,8 +5,14 @@ import javafx.scene.control.*;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.sql.*;
 
-public class Generator {
+/**
+ * The {@code GeneratorController} class will function as the controller for {@code GreetingCard.fxml}.  It will
+ * provide the fxml application with user interactivity and store user data into a database for further analysis.
+ * @author Khamilah Nixon
+ */
+public class GreetingCardController {
     @FXML
     private TextField messageTF, widthTF, lengthTF, totalTF, uppercaseTF, lowercaseTF, specialTF,
     digitsTF, sqTF;
@@ -18,9 +24,23 @@ public class Generator {
     private Greeting greeting;
     private Card card;
 
+    private void checkTF() throws InvalidInputException {
+        if(uppercaseTF.getText().isBlank() ||lowercaseTF.getText().isBlank() || specialTF.getText().isBlank() ||
+                digitsTF.getText().isBlank() || digitsTF.getText().isBlank()) {
+            throw new InvalidInputException("The paper cost and cost per character values must have a value.");
+        }
+    }
+
+    /**
+     * This method will display the results of the greeting card price compilation to the user via the {@code totalTF}.
+     * Each total is determined from the sum of the card total and greeting total based on the cost per character.
+     * If any of the text fields do not meet the designated criteria, {@code display()} from the {@code Error} class
+     * will be called and will generate an error dialog box.
+     */
     @FXML
-    private void showResults(ActionEvent actionEvent) {
+    private void showResults() {
         try {
+            checkTF();
             greeting = new Greeting(
                     messageTF.getText(),
                     Double.parseDouble(uppercaseTF.getText()),
@@ -58,22 +78,63 @@ public class Generator {
         }
     }
 
-    @FXML
-    private void fileOpen() {
+    /**
+     * This method will insert data into the {@code GreetingCardCost} MySQL database schema.
+     */
+    private void databaseInsert(int upper, int lower, int special, int digits) throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/greetingcardcost";
+        Connection con = DriverManager.getConnection(url,"root","password");
+        Statement st = con.createStatement();
 
+        int greetingRow = st.executeUpdate("INSERT INTO greetingcardcost.greeting(message, uppercase, lowercase, special, digits) " +
+                "VALUES ('" + messageTF.getText() + "'," + upper + "," + lower + "," + special + "," + digits + ")");
+        int cardRow = st.executeUpdate("INSERT INTO greetingcardcost.card(width, length) " +
+                "VALUES (" + Double.parseDouble(widthTF.getText()) + "," + Double.parseDouble(lengthTF.getText()) + ")");
+        st.executeUpdate("INSERT INTO greetingcardcost.cost(greetingID, cardID, total) " +
+                "VALUES (" + greetingRow + "," + cardRow + "," + Double.parseDouble(totalTF.getText().replace("$","")) + ")");
     }
 
+    /**
+     * This method will allow the user to save the data in the text fields into a database
+     */
     @FXML
     private void fileSave() {
+        try {
+            int upper = 0, lower = 0, special = 0, digits = 0;
+            Iterator<Map.Entry<Character, Integer>> iterator = greeting.iterator();
+            while(iterator.hasNext()) {
+                Map.Entry<Character, Integer> next = iterator.next();
+                char letter = next.getKey();
+                if(Character.isUpperCase(letter)) {
+                    upper++;
+                }
+                else if(Character.isLowerCase(letter)) {
+                    lower++;
+                }
+                else if(Character.isDigit(letter)) {
+                    digits++;
+                }
+                else {
+                    special++;
+                }
+                databaseInsert(upper,lower,special,digits);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
 
     @FXML
     private void fileClose() {
         Platform.exit();
     }
 
+    /**
+     * This method will reset the text fields
+     */
     @FXML
-    private void fileClear() {
+    private void fileReset() {
         messageTF.setText("");
         widthTF.setText("");
         lengthTF.setText("");
@@ -95,14 +156,17 @@ public class Generator {
     private void helpAbout() {
         Alert help = new Alert(Alert.AlertType.INFORMATION);
         help.setTitle("About");
-        String content = "The Greeting Card Cost Calculator allows users to determine the cost of a greeting cost" +
+        String content = "The Greeting Card Cost Calculator allows users to determine the cost of a greeting card " +
                 "based on the price per character and size of the card.";
         help.setContentText(content);
         help.show();
     }
 
+    /**
+     * This method will allow the user to enter custom costs per character and sq in. of paper
+     */
     @FXML
-    private void customCosts(ActionEvent actionEvent) {
+    private void customCosts() {
         if(customCB.isSelected()){
             uppercaseTF.setDisable(false);
             lowercaseTF.setDisable(false);

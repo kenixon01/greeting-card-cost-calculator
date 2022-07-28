@@ -10,13 +10,13 @@ public class Greeting {
 
     public Greeting(String GREETING, double costPerUpper, double costPerLower, double costPerSpecial, double costPerNumber)
             throws InvalidInputException{
+        checkGreeting();
         this.GREETING = GREETING;
         this.costPerUpper = costPerUpper;
         this.costPerLower = costPerLower;
         this.costPerSpecial = costPerSpecial;
         this.costPerNumber = costPerNumber;
         charCount = new HashMap<>();
-        checkGreeting();
     }
 
     private void checkGreeting() throws InvalidInputException {
