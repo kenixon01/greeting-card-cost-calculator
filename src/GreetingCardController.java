@@ -79,27 +79,12 @@ public class GreetingCardController {
     }
 
     /**
-     * This method will insert data into the {@code GreetingCardCost} MySQL database schema.
-     */
-    private void databaseInsert(int upper, int lower, int special, int digits) throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/greetingcardcost";
-        Connection con = DriverManager.getConnection(url,"root","password");
-        Statement st = con.createStatement();
-
-        int greetingRow = st.executeUpdate("INSERT INTO greetingcardcost.greeting(message, uppercase, lowercase, special, digits) " +
-                "VALUES ('" + messageTF.getText() + "'," + upper + "," + lower + "," + special + "," + digits + ")");
-        int cardRow = st.executeUpdate("INSERT INTO greetingcardcost.card(width, length) " +
-                "VALUES (" + Double.parseDouble(widthTF.getText()) + "," + Double.parseDouble(lengthTF.getText()) + ")");
-        st.executeUpdate("INSERT INTO greetingcardcost.cost(greetingID, cardID, total) " +
-                "VALUES (" + greetingRow + "," + cardRow + "," + Double.parseDouble(totalTF.getText().replace("$","")) + ")");
-    }
-
-    /**
      * This method will allow the user to save the data in the text fields into a database
      */
     @FXML
     private void fileSave() {
         try {
+            Database database = new Database();
             int upper = 0, lower = 0, special = 0, digits = 0;
             Iterator<Map.Entry<Character, Integer>> iterator = greeting.iterator();
             while(iterator.hasNext()) {
@@ -117,8 +102,14 @@ public class GreetingCardController {
                 else {
                     special++;
                 }
-                databaseInsert(upper,lower,special,digits);
             }
+            double width = Double.parseDouble(widthTF.getText());
+            double length = Double.parseDouble(lengthTF.getText());
+            double total = Double.parseDouble(totalTF.getText().replace("$",""));
+
+            database.cardInsert(width, length);
+            database.greetingInsert(messageTF.getText(),upper, lower, special, digits);
+            database.costInsert(messageTF.getText(),width, length, total);
         } catch (Exception e) {
             e.printStackTrace();
         }

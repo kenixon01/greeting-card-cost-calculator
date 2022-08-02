@@ -4,23 +4,23 @@ import java.util.Map;
 
 public class Greeting {
     private final String GREETING;
-    private final HashMap<Character,Integer> charCount;
+    private HashMap<Character,Integer> charCount;
 
     private double costPerUpper, costPerLower, costPerSpecial, costPerNumber;
 
     public Greeting(String GREETING, double costPerUpper, double costPerLower, double costPerSpecial, double costPerNumber)
             throws InvalidInputException{
-        checkGreeting();
         this.GREETING = GREETING;
         this.costPerUpper = costPerUpper;
         this.costPerLower = costPerLower;
         this.costPerSpecial = costPerSpecial;
         this.costPerNumber = costPerNumber;
         charCount = new HashMap<>();
+        checkGreeting();
     }
 
     private void checkGreeting() throws InvalidInputException {
-        if(GREETING.length() < 1) {
+        if(GREETING == null || GREETING.length() < 1) {
             throw new InvalidInputException("The greeting must contain at least 1 character.");
         }
         if(costPerLower < .01 && costPerUpper < .01 && costPerSpecial < .01 && costPerNumber < .01) {
@@ -35,7 +35,7 @@ public class Greeting {
             Map.Entry<Character,Integer> next = iterator.next();
             char letter = next.getKey();
             int count = next.getValue();
-            total = letterCost(letter,count);
+            total += letterCost(letter,count);
         }
         return total;
     }
@@ -55,14 +55,6 @@ public class Greeting {
             total += costPerSpecial * count;
         }
         return total;
-    }
-
-    public String getGREETING() {
-        return GREETING;
-    }
-
-    public HashMap<Character, Integer> getCharCount() {
-        return charCount;
     }
 
     public void countChar() {

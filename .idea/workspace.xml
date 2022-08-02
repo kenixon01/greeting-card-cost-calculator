@@ -2,22 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7b8299d-6d12-417b-b1ec-0f02c50318d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreetingCard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GreetingCard.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/Generator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/Generator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/ErrorDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/ErrorDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/Generator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/Greeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/Greeting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GreetingCard/GreetingCardDisplay.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/geeting-card/Generator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/geeting-card/Greeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/geeting-card/GreetingCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/geeting-card/GreetingCard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/geeting-card/Price.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ErrorDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ErrorDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GreetingCardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Greeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GreetingCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GreetingCard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GreetingCardDisplay.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GreetingCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GreetingCardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,26 +57,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "import_schema_mapping": "<schema-mapping><databases><list><schema-mapping-item><source-data-source-id>2d89c4c0-f076-4c51-9f83-36b87cf1f046</source-data-source-id><source-path>schema/\"greetingcardcost\"</source-path><target-data-source-id>2d89c4c0-f076-4c51-9f83-36b87cf1f046</target-data-source-id><target-path>schema/\"greetingcardcost\"</target-path></schema-mapping-item></list></databases></schema-mapping>",
-    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.30.jar",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;&lt;databases&gt;&lt;list&gt;&lt;schema-mapping-item&gt;&lt;source-data-source-id&gt;2d89c4c0-f076-4c51-9f83-36b87cf1f046&lt;/source-data-source-id&gt;&lt;source-path&gt;schema/\&quot;greetingcardcost\&quot;&lt;/source-path&gt;&lt;target-data-source-id&gt;2d89c4c0-f076-4c51-9f83-36b87cf1f046&lt;/target-data-source-id&gt;&lt;target-path&gt;schema/\&quot;greetingcardcost\&quot;&lt;/target-path&gt;&lt;/schema-mapping-item&gt;&lt;/list&gt;&lt;/databases&gt;&lt;/schema-mapping&gt;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.30.jar&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\minix\IdeaProjects\ITEC 3150\src\FinalExam\Question3" />
@@ -311,7 +312,8 @@
       <workItem from="1658942791566" duration="7274000" />
       <workItem from="1658967652811" duration="11000" />
       <workItem from="1658973942075" duration="8246000" />
-      <workItem from="1659017177258" duration="6068000" />
+      <workItem from="1659017177258" duration="10627000" />
+      <workItem from="1659448739738" duration="7668000" />
     </task>
     <servers />
   </component>

@@ -8,10 +8,10 @@ public class Card {
     private double costPerSqIn;
 
     public Card(Double length, Double width, Double costPerSqIn) throws InvalidInputException {
-        checkCard();
         LENGTH = length;
         WIDTH = width;
         this.costPerSqIn = costPerSqIn;
+        checkCard();
     }
 
     /**
