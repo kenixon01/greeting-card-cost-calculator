@@ -36,6 +36,11 @@ breakdown of the cost of each character, then stores that information in a MySQL
    change the second argument from "root" to your MySQL Connector username and the last argument from "password" to your<br>
    MySQL Connector password
 4. Run **GreetingCard.java**
+<img src="src/Media/blankexample.png"><br>
+<img src="src/Media/helloworldex.png"><br>
+<img src="src/Media/cardtableex.png"><br>
+<img src="src/Media/costtableex.png"><br>
+<img src="src/Media/greetingtableex.png"><br>
 
 ## License
                     GNU GENERAL PUBLIC LICENSE
