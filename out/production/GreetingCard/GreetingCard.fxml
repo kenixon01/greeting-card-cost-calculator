@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="TOP_CENTER" focusTraversable="true" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Generator">
+<GridPane alignment="TOP_CENTER" focusTraversable="true" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GreetingCardController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -20,7 +20,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#fileClear" text="Clear" />
+                  <MenuItem mnemonicParsing="false" onAction="#fileReset" text="Reset" />
                   <MenuItem fx:id="fileSave" mnemonicParsing="false" onAction="#fileSave" text="Save" />
               <MenuItem fx:id="fileClose" mnemonicParsing="false" onAction="#fileClose" text="Close" />
             </items>
